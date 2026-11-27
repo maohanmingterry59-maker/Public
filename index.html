@@ -318,8 +318,9 @@ function sk(){const v=$('#ak').value.trim(),fk=$('#fk').value.trim(),fp=$('#fp')
 document.addEventListener('click',e=>{if(!e.target.closest('#dd')&&!e.target.closest('[data-t=menu]'))$('#dd').hidden=true});
 try{speechSynthesis.getVoices();speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
 bpg();{let v=LS('theme',null);if(!v)v=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';stm(v)}
-if(FS&&fbc())fbPull().then(c=>{if(c)location.reload()}).catch(()=>{});
-document.addEventListener('visibilitychange',()=>{if(!document.hidden&&FS&&fbc())fbPull().then(c=>{if(c&&$('#ov').hidden)location.reload()}).catch(()=>{})});
+const fbk=e=>{if(/USER_DISABLED|USER_NOT_FOUND|TOKEN_EXPIRED|INVALID_REFRESH_TOKEN|INVALID_GRANT/.test(String(e&&e.message))){SYNC.concat(['kvts','fbs','jpc','user']).forEach(k=>localStorage.removeItem(k));location.reload()}};
+if(FS&&fbc())fbPull().then(c=>{if(c)location.reload()}).catch(fbk);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&FS&&fbc())fbPull().then(c=>{if(c&&$('#ov').hidden)location.reload()}).catch(fbk)});
 go('home');
 </script>
 </body>
