@@ -122,7 +122,7 @@ function go(v,a){ER=false;stopP();$('#dd').hidden=true;V=v;SM=false;sel={};rn(v,
 const rf=()=>rn(V),nav=v=>go(S.user?v:'home'),mt=()=>{$('#dd').hidden=!$('#dd').hidden};
 function ul(l){let u=S.ul;if(u.includes(l)){if(u.length>1)u=u.filter(x=>x!=l)}else{u=[...u,l];if(u.length>2)u.shift()}S.ul=u;sv('ul');rf()}
 async function hs(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
-const FBD={k:'',p:''};
+const FBD={k:'AIzaSyBE5mxAYhe8J9fOk0iqEQ8BTlAyYdT38-A',p:'ling-b157f'};
 const fbc=()=>{const c=LS('fbcfg',null);return c&&c.k&&c.p?c:(FBD.k&&FBD.p?FBD:null)};
 const SYNC=['arts','marks','words','th','wc','rate','vo','vj','hist','errs','bin','ul','dl'];
 let FS=LS('fbs',null),KT=LS('kvts',{}),CQ={},CT=0,CE=0;
